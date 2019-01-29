@@ -42,7 +42,7 @@ if (ENABLE_TOUCH_EMULATION)
     set(SOURCE_FILES ${SOURCE_FILES} MouseTouchAdaptor.cpp)
 endif()
 
-pkg_check_modules(ANDROID_PROPERTIES REQUIRED libandroid-properties)
+#pkg_check_modules(ANDROID_PROPERTIES REQUIRED libandroid-properties) # No Android, I desktop
 add_executable(${SHELL_APP} ${SOURCE_FILES})
 
 if (NOT "${ANDROID_PROPERTIES_INCLUDE_DIRS}" STREQUAL "")

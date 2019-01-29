@@ -26,7 +26,7 @@
 #include <libintl.h>
 
 // libandroid-properties
-#include <hybris/properties/properties.h>
+//#include <hybris/properties/properties.h> // I no Android, I disk top
 
 // local
 #include <paths.h>
@@ -50,9 +50,9 @@ ShellApplication::ShellApplication(int & argc, char ** argv, bool isMirServer)
     if (!parser.deviceName().isEmpty()) {
         m_deviceName = parser.deviceName();
     } else {
-        char buffer[200];
-        property_get("ro.product.device", buffer /* value */, "desktop" /* default_value*/);
-        m_deviceName = QString(buffer);
+        //char buffer[200];
+        //property_get("ro.product.device", buffer /* value */, "desktop" /* default_value*/);
+        //m_deviceName = QString(buffer); // I still no Vedroid
     }
     m_qmlArgs.setDeviceName(m_deviceName);
 
