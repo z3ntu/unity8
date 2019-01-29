@@ -130,11 +130,11 @@ endfunction()
 if(DEFINED ENV{DEB_BUILD_MULTIARCH})
   set(QDBUSXML2CPP_EXECUTABLE "/usr/lib/$ENV{DEB_BUILD_MULTIARCH}/qt5/bin/qdbusxml2cpp")
 else()
-  FIND_PROGRAM(QDBUSXML2CPP_EXECUTABLE qdbusxml2cpp)
+  FIND_PROGRAM(QDBUSXML2CPP_EXECUTABLE qdbusxml2cpp-qt5)
 endif()
 
 if(NOT QDBUSXML2CPP_EXECUTABLE)
-    message(FATAL_ERROR "qdbusxml2cpp not found")
+    message(FATAL_ERROR "qdbusxml2cpp-qt5 not found")
 endif()
 
 install(DIRECTORY data graphics
