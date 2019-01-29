@@ -26,6 +26,8 @@
 #include <QDir>
 #include <QIcon>
 
+#include <sys/types.h>
+
 namespace QLightDM
 {
 

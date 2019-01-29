@@ -23,6 +23,8 @@
 #include <QObject>
 #include <QString>
 
+#include <sys/types.h>
+
 class AccountsServiceDBusAdaptor;
 
 namespace QLightDM
